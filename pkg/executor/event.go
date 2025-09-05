@@ -2,6 +2,7 @@ package executor
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/stellar/go/xdr"
 	soroban "github.com/tryOutbounder/soroban-client-golang/pkg/rpc"
@@ -31,6 +32,10 @@ func EventCall(
 	*PaginationInfo,
 	error,
 ) {
+
+	if startLedger > endLedger {
+		return nil, nil, fmt.Errorf("startLedger (%d) cannot be greater than endLedger (%d)", startLedger, endLedger)
+	}
 
 	events, err := rpc.GetEvents(
 		context.TODO(),
