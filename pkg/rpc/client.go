@@ -7,7 +7,7 @@ import (
 
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/jhttp"
-	"github.com/tryOutbounder/soroban-client-golang/pkg/rpc/protocol"
+	"github.com/tryoutbounder/soroban-client-golang/pkg/rpc/protocol"
 )
 
 type RpcClient struct {

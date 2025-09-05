@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"github.com/stellar/go/xdr"
-	soroban "github.com/tryOutbounder/soroban-client-golang/pkg/rpc"
-	"github.com/tryOutbounder/soroban-client-golang/pkg/rpc/protocol"
+	soroban "github.com/tryoutbounder/soroban-client-golang/pkg/rpc"
+	"github.com/tryoutbounder/soroban-client-golang/pkg/rpc/protocol"
 )
 
 func LedgerEntryCall(

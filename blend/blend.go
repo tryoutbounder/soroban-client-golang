@@ -3,8 +3,8 @@ package blend
 import (
 	"net/http"
 
-	"github.com/tryOutbounder/soroban-client-golang/blend/types/backstop"
-	soroban "github.com/tryOutbounder/soroban-client-golang/pkg/rpc"
+	"github.com/tryoutbounder/soroban-client-golang/blend/types/backstop"
+	soroban "github.com/tryoutbounder/soroban-client-golang/pkg/rpc"
 )
 
 type BlendClient struct {

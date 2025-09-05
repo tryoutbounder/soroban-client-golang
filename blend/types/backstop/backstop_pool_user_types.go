@@ -5,10 +5,10 @@ import (
 	"time"
 
 	"github.com/stellar/go/xdr"
-	"github.com/tryOutbounder/soroban-client-golang/blend/types"
-	"github.com/tryOutbounder/soroban-client-golang/pkg/executor"
-	"github.com/tryOutbounder/soroban-client-golang/pkg/helpers"
-	soroban "github.com/tryOutbounder/soroban-client-golang/pkg/rpc"
+	"github.com/tryoutbounder/soroban-client-golang/blend/types"
+	"github.com/tryoutbounder/soroban-client-golang/pkg/executor"
+	"github.com/tryoutbounder/soroban-client-golang/pkg/helpers"
+	soroban "github.com/tryoutbounder/soroban-client-golang/pkg/rpc"
 )
 
 type Q4W struct {
