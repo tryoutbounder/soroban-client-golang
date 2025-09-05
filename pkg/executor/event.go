@@ -14,12 +14,6 @@ type Event struct {
 	Body   xdr.ScVal
 }
 
-type PaginationInfo struct {
-	OldestLedger uint32
-	LatestLedger uint32
-	Cursor       string
-}
-
 func EventCall(
 	rpc *soroban.RpcClient,
 	startLedger uint32,
@@ -29,7 +23,7 @@ func EventCall(
 
 ) (
 	map[string][]Event,
-	*PaginationInfo,
+	*protocol.Cursor,
 	error,
 ) {
 
@@ -83,12 +77,12 @@ func EventCall(
 		eventsResp[event.ContractID] = append(eventsResp[event.ContractID], formattedEvent)
 	}
 
-	paginationInfo := &PaginationInfo{
-		OldestLedger: events.OldestLedger,
-		LatestLedger: events.LatestLedger,
-		Cursor:       events.Cursor,
+	cursor := protocol.Cursor{
+		Ledger: events.LatestLedger,
+		// Event:  uint32,
 	}
-	return eventsResp, paginationInfo, nil
+
+	return eventsResp, &cursor, nil
 }
 
 func WildcardSwitch(exactlyOne bool) *string {
